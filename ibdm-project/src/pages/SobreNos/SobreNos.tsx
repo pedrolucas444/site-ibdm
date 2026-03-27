@@ -1,246 +1,225 @@
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import fachada from "../../assets/fachada.jpeg";
 
 const SobreNos = () => {
   return (
     <>
       <Navbar />
 
-      {/* 🔵 HERO SECTION */}
-      <section className="relative h-[200px] flex items-center">
-        {/* Imagem de fundo */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1497366216548-37526070297c')",
-          }}
-        ></div>
-
-        {/* Overlay azul */}
-        <div className="absolute inset-0 bg-[#1f3a5f]/90"></div>
-
-        {/* Conteúdo */}
-        <div className="relative max-w-7xl mx-auto px-6 text-white">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-[2px] bg-green-700"></div>
-            <span className="text-green-500 tracking-widest text-sm font-semibold">
-              NOSSA HISTÓRIA
-            </span>
-          </div>
-
-          <h1 className="text-5xl md:text-6xl font-playfair leading-tight">
-            Sobre Nós
-          </h1>
-        </div>
-      </section>
-
       {/* ⚪ SECTION ORIGINAL */}
       <section className="bg-[#f5f6f7] py-20">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           {/* 🔹 TEXTO */}
           <div>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-[2px] bg-green-700"></div>
-              <span className="text-green-700 tracking-widest text-sm font-semibold">
-                DESDE 1998
-              </span>
-            </div>
+          <div>
+  <p className="text-gray-600 mb-6 leading-relaxed">
+    O <span className="font-semibold">Instituto Brasileiro de Defesa dos Mutuários</span> reúne profissionais que há décadas atuam na análise e na orientação de contratos imobiliários no Brasil.
+  </p>
 
-            <h2 className="text-4xl md:text-5xl font-playfair text-[#1f3a5f] leading-tight mb-6">
-              Uma Tradição de Excelência Jurídica
-            </h2>
+  <p className="text-gray-600 mb-6 leading-relaxed">
+    Nossa atuação nasce da experiência prática de quem acompanha, há muitos anos, os desafios enfrentados pelos mutuários. Ao longo dessa trajetória, estudos técnicos, atuação jurídica e contato direto com milhares de famílias ajudaram a construir um conhecimento profundo sobre as relações entre consumidores, bancos e construtoras.
+  </p>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              O escritório foi fundado em 1998 com uma visão clara: oferecer
-              serviços jurídicos excepcionais, construídos sobre uma base sólida
-              de integridade, experiência e compromisso com o sucesso de nossos
-              clientes.
-            </p>
+  <p className="text-gray-600 mb-6 leading-relaxed">
+    Essa experiência consolidou uma forma de atuação baseada em três pilares:{" "}
+    <span className="font-semibold">
+      análise técnica, orientação responsável e defesa jurídica estruturada
+    </span>.
+  </p>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Ao longo das últimas décadas, crescemos de uma pequena prática
-              para um escritório completo, com advogados especializados em
-              diversas áreas do Direito. Nosso crescimento sempre foi guiado por
-              um princípio essencial: colocar nossos clientes em primeiro lugar.
-            </p>
+  <p className="text-gray-600 mb-6 leading-relaxed">
+    O Instituto atua apoiando mutuários em diversas situações envolvendo contratos imobiliários, oferecendo caminhos jurídicos seguros e informação clara para que cada família possa compreender seus direitos e tomar decisões mais conscientes sobre sua moradia.
+  </p>
 
-            <p className="text-gray-600 leading-relaxed">
-              Hoje, seguimos fortalecendo nosso legado, combinando estratégias
-              jurídicas consolidadas com abordagens inovadoras para atender às
-              necessidades de pessoas e empresas em um cenário jurídico cada vez
-              mais complexo.
-            </p>
+  <p className="text-gray-600 leading-relaxed">
+    Mais do que resolver conflitos, o Instituto trabalha para{" "}
+    <span className="font-semibold">
+      fortalecer a proteção do direito à casa própria e promover relações contratuais mais justas no mercado imobiliário brasileiro
+    </span>.
+  </p>
+</div>
           </div>
 
           {/* 🔹 IMAGEM + CARD */}
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f"
+              src={fachada}
               alt="Advogado assinando documento"
-              className="w-full h-[500px] object-cover"
+              className="w-full h-[500px] object-cover object-[center_38%]"
             />
 
             <div className="absolute -bottom-10 -left-10 bg-[#1f3a5f] text-white p-10 shadow-xl">
-              <h3 className="text-5xl font-bold text-green-700 mb-2">25+</h3>
+              <h3 className="text-5xl font-bold text-green-700 mb-2">26+</h3>
               <p className="tracking-widest text-sm">ANOS DE EXCELÊNCIA</p>
             </div>
           </div>
         </div>
       </section>
-                  {/* 🔷 MISSÃO E VISÃO */}
-      <section className="bg-[#f5f6f7] py-24">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+                    {/* 🔷 MISSÃO E VISÃO */}
+                  <section className="bg-[#f5f6f7] py-16 -mt-px">
+  <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row">
 
-          {/* MISSÃO */}
-          <div className="bg-white p-12 shadow-xl hover:shadow-2xl transition duration-300">
-            <div className="w-16 h-16 bg-green-700 flex items-center justify-center mb-8">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <circle cx="12" cy="12" r="9" />
-                <circle cx="12" cy="12" r="4" />
-              </svg>
-            </div>
+    {/* MISSÃO */}
+    <div className="w-full md:w-1/5 bg-white p-8 shadow-md">
+      <h3 className="text-[#1f3a5f] font-bold text-lg mb-4">
+        MISSÃO
+      </h3>
+      <p className="text-gray-600 text-sm leading-7">
+        Proteger o direito à moradia e orientar mutuários que enfrentam problemas com contratos imobiliários.
+        Atuamos como um escudo para famílias que conquistaram a casa própria, oferecendo análise técnica, informação clara e caminhos jurídicos responsáveis para a defesa de seus direitos.
+      </p>
+    </div>
 
-            <h3 className="text-3xl font-playfair text-[#1f3a5f] mb-6">
-              Nossa Missão
-            </h3>
+    {/* VISÃO */}
+    <div className="w-full md:w-1/5 bg-white p-8 shadow-md md:-ml-2 mt-4 md:mt-0">
+      <h3 className="text-[#1f3a5f] font-bold text-lg mb-4">
+        VISÃO
+      </h3>
+      <p className="text-gray-600 text-sm leading-7">
+        Tornar o Instituto uma referência nacional na orientação e defesa dos mutuários, ampliando o acesso à informação, fortalecendo a proteção do direito à moradia e contribuindo para um ambiente habitacional mais justo, transparente e equilibrado no Brasil.
+      </p>
+    </div>
 
-            <p className="text-gray-600 leading-8">
-              Oferecer representação jurídica de excelência, protegendo os
-              interesses de nossos clientes, entregando resultados favoráveis
-              e mantendo os mais altos padrões de ética profissional.
-              Estamos comprometidos em tornar a justiça acessível e garantir
-              atendimento personalizado e estratégico.
-            </p>
-          </div>
+    {/* VALORES */}
+    <div className="w-full md:w-3/5 bg-white p-8 shadow-md md:-ml-2 mt-4 md:mt-0">
+      <h3 className="text-[#1f3a5f] font-bold text-lg mb-6">
+        VALORES
+      </h3>
 
-          {/* VISÃO */}
-          <div className="bg-white p-12 shadow-xl hover:shadow-2xl transition duration-300">
-            <div className="w-16 h-16 bg-[#1f3a5f] flex items-center justify-center mb-8">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" />
-                <circle cx="12" cy="12" r="3" />
-              </svg>
-            </div>
+      <div className="space-y-5 text-sm text-gray-600 leading-6">
 
-            <h3 className="text-3xl font-playfair text-[#1f3a5f] mb-6">
-              Nossa Visão
-            </h3>
+        <p>
+          <span className="font-bold text-[#1f3a5f]">EXCELÊNCIA:</span>{" "}
+          Atuar com qualidade, responsabilidade e preparo técnico em cada análise, orientação e estratégia, reunindo profissionais capacitados e comprometidos.
+        </p>
 
-            <p className="text-gray-600 leading-8">
-              Ser o escritório de advocacia mais confiável e respeitado da
-              região, reconhecido pelo compromisso com a excelência,
-              soluções jurídicas inovadoras e relações duradouras com
-              nossos clientes. Buscamos uma prática onde cada cliente se
-              sinta ouvido, apoiado e seguro.
-            </p>
-          </div>
+        <p>
+          <span className="font-bold text-[#1f3a5f]">PESSOAS:</span>{" "}
+          Valorizar e desenvolver profissionais imbuídos na missão do Instituto, reconhecendo talentos e incentivando o crescimento.
+        </p>
 
-        </div>
-      </section>
-            {/* 🔷 CORE VALUES */}
-      <section className="bg-[#f5f6f7] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <p>
+          <span className="font-bold text-[#1f3a5f]">ÉTICA E TRANSPARÊNCIA:</span>{" "}
+          Conduzir cada atuação com integridade, respeito às leis e clareza nas orientações, preservando a confiança de quem busca no Instituto apoio para defender seu lar.
+        </p>
 
-          {/* Título da seção */}
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-6 mb-6">
-              <div className="w-16 h-[2px] bg-green-700"></div>
-              <span className="text-green-700 tracking-[0.3em] text-sm font-semibold">
-                NOSSA BASE
-              </span>
-              <div className="w-16 h-[2px] bg-green-700"></div>
-            </div>
+        <p>
+          <span className="font-bold text-[#1f3a5f]">CONHECIMENTO E ORIENTAÇÃO:</span>{" "}
+          Produzir e compartilhar informação de forma acessível, ajudando mutuários a compreender seus direitos e tomar decisões mais seguras.
+        </p>
 
-            <h2 className="text-5xl font-playfair text-[#1f3a5f]">
-              Valores Fundamentais
-            </h2>
-          </div>
+        <p>
+          <span className="font-bold text-[#1f3a5f]">COMPROMISSO COM A MORADIA:</span>{" "}
+          Trabalhar com dedicação para proteger famílias que conquistaram a casa própria, promovendo relações contratuais mais justas e equilibradas.
+        </p>
 
-          {/* Grid de valores */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      </div>
+    </div>
 
-            {/* 1 */}
-            <div className="bg-white p-10 shadow-lg hover:shadow-2xl transition duration-300 rounded-xl text-center">
-              <div className="w-16 h-16 bg-[#1f3a5f] flex items-center justify-center mx-auto mb-8">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path d="M12 21C12 21 4 13.5 4 8.5A4.5 4.5 0 0 1 8.5 4C10.24 4 12 5.5 12 5.5S13.76 4 15.5 4A4.5 4.5 0 0 1 20 8.5C20 13.5 12 21 12 21Z"/>
-                </svg>
-              </div>
-              <h3 className="text-2xl font-playfair text-[#1f3a5f] mb-4">
-                Integridade
-              </h3>
-              <p className="text-gray-600 leading-7">
-                Mantemos os mais altos padrões éticos em todas as nossas relações.
-              </p>
-            </div>
+  </div>
+</section>
+<section className="bg-white py-20">
+  <div className="max-w-7xl mx-auto px-6 space-y-20">
 
-            {/* 2 */}
-            <div className="bg-white p-10 shadow-lg hover:shadow-2xl transition duration-300 rounded-xl text-center">
-              <div className="w-16 h-16 bg-[#1f3a5f] flex items-center justify-center mx-auto mb-8">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <circle cx="12" cy="12" r="9" />
-                  <circle cx="12" cy="12" r="4" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-playfair text-[#1f3a5f] mb-4">
-                Excelência
-              </h3>
-              <p className="text-gray-600 leading-7">
-                Buscamos resultados excepcionais em cada caso que assumimos.
-              </p>
-            </div>
+    {/* 🔷 MEMBRO 1 */}
+    <div className="flex flex-col md:flex-row items-center gap-12">
 
-            {/* 3 */}
-            <div className="bg-white p-10 shadow-lg hover:shadow-2xl transition duration-300 rounded-xl text-center">
-              <div className="w-16 h-16 bg-[#1f3a5f] flex items-center justify-center mx-auto mb-8">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path d="M17 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M7 21v-2a4 4 0 0 1 3-3.87"/>
-                  <circle cx="12" cy="7" r="4"/>
-                </svg>
-              </div>
-              <h3 className="text-2xl font-playfair text-[#1f3a5f] mb-4">
-                Foco no Cliente
-              </h3>
-              <p className="text-gray-600 leading-7">
-                Suas necessidades e objetivos estão no centro de tudo o que fazemos.
-              </p>
-            </div>
+      {/* TEXTO */}
+      <div className="md:w-1/2">
+        <h3 className="text-3xl font-playfair text-[#1f3a5f] mb-2">
+          Silvio Saldanha
+        </h3>
+        <p className="text-green-700 font-semibold mb-4">
+          Presidente
+        </p>
 
-            {/* 4 */}
-            <div className="bg-white p-10 shadow-lg hover:shadow-2xl transition duration-300 rounded-xl text-center">
-              <div className="w-16 h-16 bg-[#1f3a5f] flex items-center justify-center mx-auto mb-8">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path d="M2 7v13h20V7"/>
-                  <path d="M2 7l10 6 10-6"/>
-                  <path d="M12 13v7"/>
-                </svg>
-              </div>
-              <h3 className="text-2xl font-playfair text-[#1f3a5f] mb-4">
-                Conhecimento
-              </h3>
-              <p className="text-gray-600 leading-7">
-                O aprendizado contínuo nos mantém na vanguarda da prática jurídica.
-              </p>
-            </div>
+        <p className="text-gray-600 leading-7 mb-4">
+          Com mais de 26 anos de experiência na análise de contratos e na defesa de mutuários, Silvio Saldanha dedicou sua trajetória à orientação de famílias que enfrentam desafios em questões imobiliárias e contratuais.
+        </p>
 
-          </div>
-        </div>
-      </section>
+        <p className="text-gray-600 leading-7 mb-6">
+          Sua atuação é marcada pelo estudo constante das relações jurídicas no mercado habitacional e pela busca de soluções que protejam o direito à moradia com responsabilidade, estratégia e segurança técnica.
+        </p>
+
+        <blockquote className="border-l-4 border-green-700 pl-4 italic text-gray-700">
+          “Minha trajetória reforçou a importância de proteger os mutuários e ampliar o acesso à informação. No Instituto, essa missão se fortalece com mais estrutura e responsabilidade. Quem lutou pela casa própria merece proteção à altura.”
+        </blockquote>
+      </div>
+
+      {/* FOTO */}
+      <div className="md:w-1/2">
+        <img
+          src="/src/assets/silvio.png"
+          alt="Silvio Saldanha"
+          className="w-full h-[400px] object-cover object-[center_65%] rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+
+    {/* 🔷 MEMBRO 2 */}
+    <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+
+      {/* TEXTO */}
+      <div className="md:w-1/2">
+        <h3 className="text-3xl font-playfair text-[#1f3a5f] mb-2">
+          Diovana Bastos
+        </h3>
+        <p className="text-green-700 font-semibold mb-4">
+          Diretora Jurídica
+        </p>
+
+        <p className="text-gray-600 leading-7 mb-4">
+          Advogada formada pela Unisinos, Dra. Diovana Bastos atua há mais de 20 anos no direito imobiliário, com experiência em mais de 6.500 processos judiciais envolvendo contratos habitacionais e disputas relacionadas.
+        </p>
+
+        <p className="text-gray-600 leading-7">
+          Sua atuação é marcada pelo rigor técnico, análise cuidadosa de cada caso e busca por soluções jurídicas responsáveis para a defesa dos mutuários.
+          Sempre atenta às inovações e mudanças no mercado imobiliário, Diovana coloca em prática seu talento, carisma e versatilidade.
+        </p>
+      </div>
+
+      {/* FOTO */}
+      <div className="md:w-1/2">
+        <img
+          src="/src/assets/diovana.png"
+          alt="Diovana Bastos"
+          className="w-full h-[400px] object-cover object-[center_50%] rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+
+    {/* 🔷 MEMBRO 3 */}
+    <div className="flex flex-col md:flex-row items-center gap-12">
+
+      {/* TEXTO */}
+      <div className="md:w-1/2">
+        <h3 className="text-3xl font-playfair text-[#1f3a5f] mb-2">
+          Lucas Bastos
+        </h3>
+        <p className="text-green-700 font-semibold mb-4">
+          Diretor de Negócios
+        </p>
+
+        <blockquote className="border-l-4 border-green-700 pl-4 italic text-gray-700">
+          “Em um mercado de constante evolução, busco me manter sempre atento às atualizações e inovações.
+          Acredito que é assim que se constrói um trabalho responsável e de excelência, sempre prezando pelos direitos dos mutuários”
+        </blockquote>
+      </div>
+
+      {/* FOTO */}
+      <div className="md:w-1/2">
+        <img
+          src="/src/assets/lucas.png"
+          alt="Lucas Bastos"
+          className="w-full h-[400px] object-cover object-[center_57%] rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+      <Footer />
     </>
   );
 };

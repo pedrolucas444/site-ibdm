@@ -1,5 +1,6 @@
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, Instagram } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import logo2 from "../assets/logo2.png";
 
 export default function Navbar() {
   return (
@@ -12,19 +13,14 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone size={16} />
-              <span>+55 (31) 99999-9999</span>
+              <span>0800-332-3000</span>
             </div>
 
             <div className="flex items-center gap-2">
               <Mail size={16} />
-              <span>contato@seuescritorio.com</span>
+              <span>ibdm@ibdmbrasil.com.br</span>
             </div>
           </div>
-
-          <div>
-            <span>Seg – Sex: 09:00 às 18:00</span>
-          </div>
-
         </div>
       </div>
 
@@ -33,27 +29,25 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
           {/* Logo + Nome */}
-          <div className="flex items-center gap-3">
-            <div className="bg-[#1f3a5f] p-3 rounded">
-              <span className="text-white text-xl font-bold">⚖</span>
-            </div>
-
-            <div>
-              <h1 className="text-xl font-raleway-bold text-[#1f3a5f]">
-                Silva & Associados
-              </h1>
-              <p className="text-xs tracking-widest text-gray-500">
-                ADVOGADOS
-              </p>
-            </div>
+          <div className="flex items-center">
+            <img src={logo2} alt="Logo IBDM" className="h-14 w-auto" />
           </div>
 
           {/* Menu */}
           <nav className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+            <a
+              href="http://www.instagram.com/ibdmbrasil"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram IBDM"
+              className="text-[#C13584] hover:opacity-80 transition-opacity"
+            >
+              <Instagram size={20} />
+            </a>
             <NavLink 
               to="/" 
               className={({ isActive }) => 
-                isActive ? "text-green-600 font-semibold" : "hover:text-[#1f3a5f] transition"
+                isActive ? "text-green-700 font-semibold" : "hover:text-[#1f3a5f] transition"
               }
             >
               Início
@@ -62,33 +56,38 @@ export default function Navbar() {
             <NavLink 
               to="/sobre-nos" 
               className={({ isActive }) => 
-                isActive ? "text-green-600 font-semibold" : "hover:text-[#1f3a5f] transition"
+                isActive ? "text-green-700 font-semibold" : "hover:text-[#1f3a5f] transition"
               }
             >
               Quem Somos
             </NavLink>
             
             <NavLink 
-              to="/servicos" 
+              to="/nossos-servicos" 
               className={({ isActive }) => 
-                isActive ? "text-green-600 font-semibold" : "hover:text-[#1f3a5f] transition"
+                isActive ? "text-green-700 font-semibold" : "hover:text-[#1f3a5f] transition"
               }
             >
-              Nossos Serviços
+              Serviços
             </NavLink>
             
             <NavLink 
               to="/fale-conosco" 
               className={({ isActive }) => 
-                isActive ? "text-green-600 font-semibold" : "hover:text-[#1f3a5f] transition"
+                isActive ? "text-green-700 font-semibold" : "hover:text-[#1f3a5f] transition"
               }
             >
               Fale Conosco
             </NavLink>
 
-            <button className="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800 transition shadow">
-              Consulta Gratuita
-            </button>
+            <a
+              href="https://w.app/ibdmbrasil"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800 transition shadow"
+            >
+              Consultoria Gratuita
+            </a>
           </nav>
 
         </div>
