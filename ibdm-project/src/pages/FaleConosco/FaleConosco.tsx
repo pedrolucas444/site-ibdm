@@ -38,9 +38,8 @@ const FaleConosco = () => {
     <>
       <Navbar />
 
-      {/* 🔵 HERO SECTION */}
-      <section className="relative h-[200px] flex items-center">
-        {/* Imagem de fundo */}
+      {/* 🔵 HERO */}
+      <section className="relative h-[160px] md:h-[200px] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -49,174 +48,186 @@ const FaleConosco = () => {
           }}
         ></div>
 
-        {/* Overlay azul */}
         <div className="absolute inset-0 bg-[#1f3a5f]/90"></div>
 
-        {/* Conteúdo */}
-        <div className="relative max-w-7xl mx-auto px-6 text-white">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-[2px] bg-green-700"></div>
-            <span className="text-green-500 tracking-widest text-sm font-semibold">
+        <div className="relative max-w-7xl mx-auto px-4 md:px-6 text-white">
+          <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+            <div className="w-8 md:w-12 h-[2px] bg-green-700"></div>
+            <span className="text-green-500 tracking-widest text-xs md:text-sm font-semibold">
               ENTRE EM CONTATO
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-playfair leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-playfair leading-tight">
             Fale Conosco
           </h1>
         </div>
       </section>
 
       {/* 🔵 CONTEÚDO */}
-      <section className="bg-[#f8f8f8] py-20 px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-        
-        {/* FORMULÁRIO */}
-        <div>
-          <p className="text-green-700 tracking-[0.3em] uppercase text-sm mb-4 flex items-center gap-4">
-            <span className="w-12 h-[1px] bg-green-700"></span>
-            Envie uma mensagem
-          </p>
+      <section className="bg-[#f8f8f8] py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
 
-          <h2 className="text-5xl font-serif text-[#243b55] mb-6">
-            Agende uma Consulta
-          </h2>
+          {/* FORMULÁRIO */}
+          <div>
+            <p className="text-green-700 tracking-[0.2em] md:tracking-[0.3em] uppercase text-xs md:text-sm mb-4 flex items-center gap-3 md:gap-4">
+              <span className="w-8 md:w-12 h-[1px] bg-green-700"></span>
+              Envie uma mensagem
+            </p>
 
-          <p className="text-gray-600 mb-8">
-            Preencha o formulário abaixo e um de nossos consultores entrará em
-            contato com você para discutir seu caso.
-          </p>
+            <h2 className="text-3xl md:text-5xl font-serif text-[#243b55] mb-4 md:mb-6">
+              Agende uma Consulta
+            </h2>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div>
-              <label className="block mb-2 font-medium">Nome Completo *</label>
-              <input
-                type="text"
-                placeholder="Seu nome"
-                value={nome}
-                onChange={(event) => setNome(event.target.value)}
-                className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
-              />
-            </div>
+            <p className="text-gray-600 text-sm md:text-base mb-6 md:mb-8">
+              Preencha o formulário abaixo e um de nossos consultores entrará em
+              contato com você para discutir seu caso.
+            </p>
 
-            <div>
+            <form className="space-y-5 md:space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label className="block mb-2 font-medium">Telefone</label>
+                <label className="block mb-2 font-medium text-sm md:text-base">
+                  Nome Completo *
+                </label>
+                <input
+                  type="text"
+                  placeholder="Seu nome"
+                  value={nome}
+                  onChange={(event) => setNome(event.target.value)}
+                  className="w-full border border-gray-300 p-3 rounded-md text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-green-700"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-medium text-sm md:text-base">
+                  Telefone
+                </label>
                 <input
                   type="text"
                   placeholder="(11) 99999-9999"
                   value={telefone}
                   onChange={(event) => setTelefone(event.target.value)}
-                  className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
+                  className="w-full border border-gray-300 p-3 rounded-md text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-green-700"
                 />
               </div>
-            </div>
 
-            <div>
-              <label className="block mb-2 font-medium">Sua Mensagem *</label>
-              <textarea
-                rows={5}
-                placeholder="Descreva seu caso..."
-                value={mensagem}
-                onChange={(event) => setMensagem(event.target.value)}
-                className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-green-700 hover:bg-green-800 text-white py-4 rounded-md flex items-center justify-center gap-2 text-lg font-medium transition"
-            >
-              <Send size={18} />
-              Enviar Mensagem
-            </button>
-          </form>
-        </div>
-
-        {/* CARD INFORMAÇÕES */}
-        <div className="bg-[#243b55] text-white p-10 rounded-2xl shadow-xl">
-          <h3 className="text-3xl font-serif mb-10">
-            Informações de Contato
-          </h3>
-
-          <div className="space-y-8">
-
-            <div className="flex items-start gap-4">
-              <div className="bg-green-700 p-3 rounded-md">
-                <Phone size={20} />
-              </div>
               <div>
-                <p className="text-green-400 uppercase text-sm">Telefone</p>
-                <p className="text-xl font-semibold">0800 332 3000</p>
-                <p className="text-sm text-green-300 mb-3">Principal</p>
-                <p className="text-lg">11 91943-7053</p>
-                <p className="text-lg">31 99679-8513</p>
-                <p className="text-lg">41 99178-0055</p>
-                <p className="text-lg">51 99671-0812</p>
-                <p className="text-lg">61 99658-9957</p>
+                <label className="block mb-2 font-medium text-sm md:text-base">
+                  Sua Mensagem *
+                </label>
+                <textarea
+                  rows={4}
+                  placeholder="Descreva seu caso..."
+                  value={mensagem}
+                  onChange={(event) => setMensagem(event.target.value)}
+                  className="w-full border border-gray-300 p-3 rounded-md text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-green-700"
+                ></textarea>
               </div>
-            </div>
 
-            <div className="flex items-start gap-4">
-              <div className="bg-green-700 p-3 rounded-md">
-                <Mail size={20} />
-              </div>
-              <div>
-                <p className="text-green-400 uppercase text-sm">Email</p>
-                <p className="text-lg">ibdm@ibdmbrasil.com.br</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="bg-green-700 p-3 rounded-md">
-                <MapPin size={20} />
-              </div>
-              <div>
-                <p className="text-green-400 uppercase text-sm">Endereço</p>
-                <p className="text-lg">
-                  Rua Juiz Achilles Velloso, 160 - Estoril <br />
-                  Belo Horizonte - MG, 30494-180
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <a
-                href="http://www.instagram.com/ibdmbrasil"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-[#C13584] hover:bg-[#E1306C] text-white text-center py-4 rounded-md font-medium transition flex items-center justify-center gap-2"
+              <button
+                type="submit"
+                className="w-full bg-green-700 hover:bg-green-800 text-white py-3 md:py-4 rounded-md flex items-center justify-center gap-2 text-base md:text-lg font-medium transition"
               >
-                <Instagram size={18} />
-                Instagram
-              </a>
+                <Send size={18} />
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
 
-              <a
-                href="https://w.app/ibdmbrasil"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-green-600 hover:bg-green-500 text-white text-center py-4 rounded-md font-medium transition flex items-center justify-center gap-2"
-              >
-                <MessageCircle size={18} />
-                WhatsApp
-              </a>
+          {/* CARD CONTATO */}
+          <div className="bg-[#243b55] text-white p-6 md:p-10 rounded-2xl shadow-xl">
+            <h3 className="text-2xl md:text-3xl font-serif mb-8 md:mb-10">
+              Informações de Contato
+            </h3>
+
+            <div className="space-y-6 md:space-y-8">
+
+              <div className="flex items-start gap-4">
+                <div className="bg-green-700 p-2 md:p-3 rounded-md">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <p className="text-green-400 uppercase text-xs md:text-sm">
+                    Telefone
+                  </p>
+                  <p className="text-lg md:text-xl font-semibold">
+                    0800 332 3000
+                  </p>
+                  <p className="text-sm text-green-300 mb-2">Principal</p>
+                  <p className="text-sm md:text-base">11 91943-7053</p>
+                  <p className="text-sm md:text-base">31 99679-8513</p>
+                  <p className="text-sm md:text-base">41 99178-0055</p>
+                  <p className="text-sm md:text-base">51 99671-0812</p>
+                  <p className="text-sm md:text-base">61 99658-9957</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-green-700 p-2 md:p-3 rounded-md">
+                  <Mail size={18} />
+                </div>
+                <div>
+                  <p className="text-green-400 uppercase text-xs md:text-sm">
+                    Email
+                  </p>
+                  <p className="text-sm md:text-base">
+                    ibdm@ibdmbrasil.com.br
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-green-700 p-2 md:p-3 rounded-md">
+                  <MapPin size={18} />
+                </div>
+                <div>
+                  <p className="text-green-400 uppercase text-xs md:text-sm">
+                    Endereço
+                  </p>
+                  <p className="text-sm md:text-base">
+                    Rua Juiz Achilles Velloso, 160 - Estoril <br />
+                    Belo Horizonte - MG
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 pt-2">
+                <a
+                  href="http://www.instagram.com/ibdmbrasil"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-[#C13584] hover:bg-[#E1306C] text-white py-3 md:py-4 rounded-md text-sm md:text-base flex items-center justify-center gap-2 transition"
+                >
+                  <Instagram size={18} />
+                  Instagram
+                </a>
+
+                <a
+                  href="https://w.app/ibdmbrasil"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-green-600 hover:bg-green-500 text-white py-3 md:py-4 rounded-md text-sm md:text-base flex items-center justify-center gap-2 transition"
+                >
+                  <MessageCircle size={18} />
+                  WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* MAPA */}
-      <div className="max-w-7xl mx-auto mt-16">
-        <iframe
-          title="Mapa"
-          src="https://www.google.com/maps?q=Rua+Juiz+Achilles+Velloso,+160+-+Estoril,+Belo+Horizonte+-+MG,+30494-180&output=embed"
-          width="100%"
-          height="350"
-          className="rounded-2xl shadow-md"
-          loading="lazy"
-        ></iframe>
-      </div>
-    </section>
+        {/* MAPA */}
+        <div className="max-w-7xl mx-auto mt-12 md:mt-16 px-4 md:px-6">
+          <iframe
+            title="Mapa"
+            src="https://www.google.com/maps?q=Rua+Juiz+Achilles+Velloso,+160+-+Estoril,+Belo+Horizonte+-+MG,+30494-180&output=embed"
+            width="100%"
+            height="300"
+            className="rounded-2xl shadow-md"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
 
       <Footer />
     </>
