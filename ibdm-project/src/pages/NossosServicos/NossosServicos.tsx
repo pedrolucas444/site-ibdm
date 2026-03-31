@@ -57,22 +57,22 @@ const NossosServicos = () => {
             {[
               {
                 title: "Redução de Prestações",
-                text: "Análise contratual para identificar encargos indevidos, juros abusivos e distorções nos cálculos, buscando tornar o financiamento mais equilibrado.",
+                text: "Análise contratual para identificar encargos indevidos, distorções nos cálculos, juros abusivos e possibilidades jurídicas de revisão que possam tornar o financiamento mais equilibrado.",
                 icon: "M12 8c-2 0-3 1-3 2s1 2 3 2 3 1 3 2-1 2-3 2M12 6v2m0 8v2M4 12h16",
               },
               {
                 title: "Reavaliação do Saldo Devedor",
-                text: "Estudo técnico do contrato e da evolução da dívida para identificar inconsistências e cobranças indevidas.",
+                text: "Estudo técnico do contrato e da evolução da dívida para verificar inconsistências, cobranças indevidas ou distorções que possam impactar o valor final do financiamento.",
                 icon: "M3 3v18h18M9 17V9M13 17V5M17 17v-7",
               },
               {
                 title: "Suspensão e Anulação de Leilões",
-                text: "Atuação jurídica para identificar irregularidades em leilões e proteger o imóvel.",
+                text: "Atuação jurídica em casos onde o imóvel foi levado ou está prestes a ser levado a leilão, avaliando irregularidades no processo e buscando medidas legais para proteção do mutuário.",
                 icon: "M14 7l3 3M5 12l7-7 7 7M5 12v7h14v-7",
               },
               {
                 title: "Rescisão de Contrato com Construtora",
-                text: "Assessoria para encerramento de contratos em casos de descumprimento contratual.",
+                text: "Assessoria em situações onde o comprador precisa encerrar o contrato por descumprimento contratual ou outras circunstâncias previstas na legislação.",
                 icon: "M9 12h6M9 16h6M9 8h6M6 4h12v16H6z",
               },
             ].map((item, i) => (
@@ -126,7 +126,7 @@ const NossosServicos = () => {
                     Indenização por Atraso na Obra
                   </h3>
                   <p className="text-gray-600 text-sm md:text-base leading-6 md:leading-7">
-                    Atuação em casos de atraso na entrega de imóveis, garantindo reparação pelos prejuízos.
+                   Atuação em casos em que construtoras descumprem prazos contratuais, garantindo que os direitos do comprador sejam respeitados e reparados.
                   </p>
                 </div>
               </div>
@@ -148,18 +148,17 @@ const NossosServicos = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center mb-16 md:mb-20">
 
-            <div className="w-full h-[250px] md:h-[500px] overflow-hidden rounded-lg">
-              <img
-                src={lucasThayara}
-                alt="Equipe"
-                className="w-full h-full object-cover object-[center_85%] md:object-[center_75%]"
-              />
-            </div>
+            <div className="w-full h-[400px] md:h-[600px] overflow-hidden rounded-lg">
+  <img
+    src={lucasThayara}
+    alt="Equipe"
+className="w-full h-full object-cover object-[center_60%] md:object-[center_75%]"  />
+</div>
 
             <div className="flex flex-col gap-12 text-center">
               {[
-                ["01", "Análise técnica", "Avaliação detalhada da situação e documentação."],
-                ["02", "Estratégia jurídica", "Planejamento personalizado para sua defesa."],
+                ["01", "Análise técnica", "Iniciamos com uma avaliação detalhada da situação do imóvel e da documentação envolvida. Nosso objetivo é compreender o caso com profundidade e identificar possíveis caminhos jurídicos."],
+                ["02", "Estratégia jurídica", "A partir da análise, estruturamos a estratégia mais adequada e personalizada para sua defesa, sempre com responsabilidade, método e segurança jurídica."],
               ].map(([n, t, d], i) => (
                 <div key={i}>
                   <div className="text-green-700 text-5xl md:text-7xl font-playfair mb-3">
@@ -175,8 +174,8 @@ const NossosServicos = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
             {[
-              ["03", "Atuação especializada", "Execução com técnica e acompanhamento."],
-              ["04", "Defesa da moradia", "Foco no melhor resultado para o cliente."],
+              ["03", "Atuação especializada", "Implementamos a estratégia atuando com técnica, experiência e acompanhamento em cada etapa do processo."],
+              ["04", "Defesa da moradia", "Atuamos com dedicação e exelencia. Nosso propósito é alcançar o melhor resultado para quem tanto lutou por sua casa própria."],
             ].map(([n, t, d], i) => (
               <div key={i}>
                 <div className="text-green-700 text-5xl md:text-7xl font-playfair mb-3">
