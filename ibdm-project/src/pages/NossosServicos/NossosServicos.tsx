@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import lucasThayara from "../../assets/lucasThayara.png";
 
 const NossosServicos = () => {
   return (
@@ -149,8 +150,9 @@ const NossosServicos = () => {
 
             <div className="w-full h-[250px] md:h-[500px] overflow-hidden rounded-lg">
               <img
-                src="/src/assets/lucasThayara.png"
-                className="w-full h-full object-cover object-center md:object-bottom"
+                src={lucasThayara}
+                alt="Equipe"
+                className="w-full h-full object-cover object-[center_85%] md:object-[center_75%]"
               />
             </div>
 

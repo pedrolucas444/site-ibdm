@@ -1,6 +1,9 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import fachada from "../../assets/fachada.jpeg";
+import silvio from "../../assets/silvio.png";
+import diovana from "../../assets/diovana.png";
+import lucas from "../../assets/lucas.png";
 
 const SobreNos = () => {
   return (
@@ -149,12 +152,12 @@ const SobreNos = () => {
 
       {/* FOTO */}
       <div className="md:w-1/2">
-        <img
-          src="/src/assets/silvio.png"
-          alt="Silvio Saldanha"
-          className="w-full h-[400px] object-cover object-[center_65%] rounded-xl shadow-lg"
-        />
-      </div>
+              <img
+                src={silvio}
+                alt="Silvio"
+                className="w-full h-[280px] md:h-[400px] object-cover object-[center_65%] rounded-xl shadow-lg"
+              />
+            </div>
     </div>
 
     {/* 🔷 MEMBRO 2 */}
@@ -181,12 +184,12 @@ const SobreNos = () => {
 
       {/* FOTO */}
       <div className="md:w-1/2">
-        <img
-          src="/src/assets/diovana.png"
-          alt="Diovana Bastos"
-          className="w-full h-[400px] object-cover object-[center_50%] rounded-xl shadow-lg"
-        />
-      </div>
+              <img
+                src={diovana}
+                alt="Diovana"
+                className="w-full h-[280px] md:h-[400px] object-cover object-[center_50%] rounded-xl shadow-lg"
+              />
+            </div>
     </div>
 
     {/* 🔷 MEMBRO 3 */}
@@ -209,12 +212,12 @@ const SobreNos = () => {
 
       {/* FOTO */}
       <div className="md:w-1/2">
-        <img
-          src="/src/assets/lucas.png"
-          alt="Lucas Bastos"
-          className="w-full h-[400px] object-cover object-[center_57%] rounded-xl shadow-lg"
-        />
-      </div>
+              <img
+                src={lucas}
+                alt="Lucas"
+                className="w-full h-[280px] md:h-[400px] object-cover object-[center_57%] rounded-xl shadow-lg"
+              />
+            </div>
     </div>
 
   </div>
