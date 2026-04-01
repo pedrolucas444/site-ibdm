@@ -34,7 +34,10 @@ export default function Home() {
                   className="w-full h-full object-cover"
                   src={videoInicio}
                   style={{ objectPosition: "center 25%" }}
-                  controls
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   preload="metadata"
                 />
               </div>
