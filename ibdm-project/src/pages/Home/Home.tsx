@@ -1,10 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import videoInicio from "../../assets/videoInicio1.mp4";
 import logo3 from "../../assets/logo3.jpg";
 
 export default function Home() {
+
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [muted, setMuted] = useState(false);
 
   // 🔥 Carrega script do Elfsight
   useEffect(() => {
@@ -15,6 +18,30 @@ export default function Home() {
       document.body.appendChild(script);
     }
   }, []);
+
+  // 🎥 Tenta iniciar com som (com fallback)
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = false;
+    setMuted(false);
+
+    video.play().catch(() => {
+      // 🔁 Se navegador bloquear, volta mutado
+      video.muted = true;
+      setMuted(true);
+      video.play();
+    });
+  }, []);
+
+  // 🔊 Alternar som manual
+  const toggleSound = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !muted;
+      setMuted(!muted);
+    }
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f8f8]">
@@ -28,19 +55,27 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
 
             {/* 🎥 VÍDEO */}
-            <div>
+            <div className="relative">
               <div className="w-full h-75 md:h-100 overflow-hidden rounded-md">
                 <video
+                  ref={videoRef}
                   className="w-full h-full object-cover"
                   src={videoInicio}
                   style={{ objectPosition: "center 25%" }}
                   autoPlay
-                  muted
                   loop
                   playsInline
                   preload="metadata"
                 />
               </div>
+
+              {/* 🔊 BOTÃO DE SOM */}
+              <button
+                onClick={toggleSound}
+                className="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white px-4 py-2 rounded-md backdrop-blur transition"
+              >
+                {muted ? "🔇 Ativar som" : "🔊 Mutar"}
+              </button>
             </div>
 
             {/* 📝 CONTEÚDO */}
