@@ -203,7 +203,7 @@ const FaleConosco = () => {
                 </a>
 
                 <a
-                  href="https://w.app/ibdmbrasil"
+                  href="https://wa.me/31996798513"
                   target="_blank"
                   rel="noreferrer"
                   className="bg-green-600 hover:bg-green-500 text-white py-3 md:py-4 rounded-md text-sm md:text-base flex items-center justify-center gap-2 transition"

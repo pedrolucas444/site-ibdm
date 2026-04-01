@@ -106,7 +106,7 @@ export default function Home() {
               {/* BOTÃO */}
               <div className="flex gap-4 flex-wrap">
                 <a
-                  href="https://w.app/ibdmbrasil"
+                  href="https://wa.me/31996798513"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-700 hover:bg-green-800 transition px-8 py-4 text-white font-semibold"

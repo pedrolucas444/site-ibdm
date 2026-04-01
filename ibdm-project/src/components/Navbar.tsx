@@ -74,7 +74,7 @@ export default function Navbar() {
             </NavLink>
 
             <a
-              href="https://w.app/ibdmbrasil"
+              href="https://wa.me/31996798513"
               target="_blank"
               rel="noreferrer"
               className="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800 transition shadow"
@@ -112,7 +112,7 @@ export default function Navbar() {
             <NavLink to="/fale-conosco" onClick={() => setOpen(false)}>Fale Conosco</NavLink>
 
             <a
-              href="https://w.app/ibdmbrasil"
+              href="https://wa.me/31996798513"
               target="_blank"
               rel="noreferrer"
               className="bg-green-700 text-white px-4 py-3 rounded-md text-center"

@@ -62,7 +62,7 @@ const Footer = () => {
               },
               {
                 name: "WhatsApp",
-                href: "https://w.app/ibdmbrasil",
+                href: "https://wa.me/31996798513",
                 bgClass: "bg-[#25D366] hover:bg-[#1EBE5D]",
                 icon: (
                   <svg
